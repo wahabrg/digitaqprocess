@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_IfhNADbGEe-UzoaGftVf3A" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_examenItem" structureRef="com.myspace.evaluation.Examen"/>
+  <bpmn2:itemDefinition id="_approbationItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_specialityItem" structureRef="com.myspace.evaluation.speciality"/>
+  <bpmn2:itemDefinition id="_idexamItem" structureRef="Float"/>
+  <bpmn2:itemDefinition id="_suiviItem" structureRef="com.myspace.evaluation.suivi"/>
+  <bpmn2:itemDefinition id="_clotureItem" structureRef="com.myspace.evaluation.cloture"/>
+  <bpmn2:itemDefinition id="_correctionItem" structureRef="com.myspace.evaluation.correction"/>
+  <bpmn2:itemDefinition id="_deliberationItem" structureRef="com.myspace.evaluation.deliberation"/>
+  <bpmn2:itemDefinition id="_ressourcesItem" structureRef="com.myspace.evaluation.ressources"/>
+  <bpmn2:itemDefinition id="_recoursItem" structureRef="com.myspace.evaluation.recours"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_examenInputXItem" structureRef="com.myspace.evaluation.Examen"/>
+  <bpmn2:itemDefinition id="_Activity_06cshdv_deliberationOutputXItem" structureRef="com.myspace.evaluation.deliberation"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_examenInputXItem" structureRef="com.myspace.evaluation.Examen"/>
+  <bpmn2:itemDefinition id="_Activity_1voo8f4_specialityOutputXItem" structureRef="com.myspace.evaluation.speciality"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_examenInputXItem" structureRef="com.myspace.evaluation.Examen"/>
+  <bpmn2:itemDefinition id="_Activity_1yrnzmr_recoursOutputXItem" structureRef="com.myspace.evaluation.recours"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_examenInputXItem" structureRef="com.myspace.evaluation.Examen"/>
+  <bpmn2:itemDefinition id="_Activity_0653kl5_correctionOutputXItem" structureRef="com.myspace.evaluation.correction"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_examenInputXItem" structureRef="com.myspace.evaluation.Examen"/>
+  <bpmn2:itemDefinition id="_Activity_1qv614w_examenOutputXItem" structureRef="com.myspace.evaluation.Examen"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_examenInputXItem" structureRef="com.myspace.evaluation.Examen"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_clotureOutputXItem" structureRef="com.myspace.evaluation.cloture"/>
+  <bpmn2:itemDefinition id="__AA1A0F98-18C5-47EA-BA03-74E45929966C_ressourcesOutputXItem" structureRef="com.myspace.evaluation.ressources"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_examenInputXItem" structureRef="com.myspace.evaluation.Examen"/>
+  <bpmn2:itemDefinition id="_Activity_1vh2hqj_suiviOutputXItem" structureRef="com.myspace.evaluation.suivi"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_examenInputXItem" structureRef="com.myspace.evaluation.Examen"/>
+  <bpmn2:itemDefinition id="_Activity_0qn2v4l_approbationOutputXItem" structureRef="Boolean"/>
+  <bpmn2:process id="Process_0ru32hs" drools:packageName="com.myspace.evaluation" drools:version="1.0" drools:adHoc="false" name="Gestion examen" processType="Public">
+    <bpmn2:property id="examen" itemSubjectRef="_examenItem" name="examen">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[examen]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="approbation" itemSubjectRef="_approbationItem" name="approbation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[approbation]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="speciality" itemSubjectRef="_specialityItem" name="speciality">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[speciality]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="idexam" itemSubjectRef="_idexamItem" name="idexam">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[idexam]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="suivi" itemSubjectRef="_suiviItem" name="suivi">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[suivi]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="cloture" itemSubjectRef="_clotureItem" name="cloture">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[cloture]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="correction" itemSubjectRef="_correctionItem" name="correction">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[correction]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="deliberation" itemSubjectRef="_deliberationItem" name="deliberation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[deliberation]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="ressources" itemSubjectRef="_ressourcesItem" name="ressources">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[ressources]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="recours" itemSubjectRef="_recoursItem" name="recours">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[recours]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:laneSet id="_IfhNATbGEe-UzoaGftVf3A">
+      <bpmn2:lane id="Lane_1e3diye" name="Chef d&apos;équipe de formation">
+        <bpmn2:extensionElements>
+          <drools:metaData name="elementname">
+            <drools:metaValue><![CDATA[Chef d'équipe de formation]]></drools:metaValue>
+          </drools:metaData>
+        </bpmn2:extensionElements>
+        <bpmn2:flowNodeRef>Activity_0653kl5</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Activity_06cshdv</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Activity_0qn2v4l</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Gateway_0pxb000</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_0y7vnj2" name="chef du département">
+        <bpmn2:extensionElements>
+          <drools:metaData name="elementname">
+            <drools:metaValue><![CDATA[chef du département]]></drools:metaValue>
+          </drools:metaData>
+        </bpmn2:extensionElements>
+        <bpmn2:flowNodeRef>Event_1hisnmk</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Activity_1qv614w</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>StartEvent_1pxk9rb</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_AA1A0F98-18C5-47EA-BA03-74E45929966C</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Activity_1vh2hqj</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Activity_1voo8f4</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_B1E9CE27-F895-44DD-B272-87DC1127DAE5</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+    </bpmn2:laneSet>
+    <bpmn2:sequenceFlow id="_91554CA2-CE95-4FD6-8C7F-64057805FE70" sourceRef="Gateway_0pxb000" targetRef="_B1E9CE27-F895-44DD-B272-87DC1127DAE5">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IfhNAjbGEe-UzoaGftVf3A" language="http://www.java.com/java"><![CDATA[return KieFunctions.isFalse(approbation);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_660D37CA-0E13-4F7A-B45B-8993658A535E" sourceRef="Activity_0qn2v4l" targetRef="Gateway_0pxb000">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.source">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_345DF013-6DD1-4314-8A9D-38F5FA613B1E" sourceRef="StartEvent_1pxk9rb" targetRef="_B1E9CE27-F895-44DD-B272-87DC1127DAE5"/>
+    <bpmn2:sequenceFlow id="Flow_16k1it2" sourceRef="Activity_1qv614w" targetRef="Activity_0qn2v4l"/>
+    <bpmn2:sequenceFlow id="_6C9598BA-C200-4049-A04E-85D47F05A9FE" sourceRef="_B1E9CE27-F895-44DD-B272-87DC1127DAE5" targetRef="Activity_1qv614w"/>
+    <bpmn2:sequenceFlow id="Flow_0ktcw4t" sourceRef="Activity_1vh2hqj" targetRef="Activity_0653kl5"/>
+    <bpmn2:sequenceFlow id="Flow_1q11s8m" sourceRef="_AA1A0F98-18C5-47EA-BA03-74E45929966C" targetRef="Event_1hisnmk"/>
+    <bpmn2:sequenceFlow id="_5BFE00AA-FA3C-4FA8-BD36-2608C0168A1E" sourceRef="Activity_0653kl5" targetRef="Activity_1yrnzmr"/>
+    <bpmn2:sequenceFlow id="_23BA1F89-6202-4F91-A1B7-C05A52A11308" sourceRef="Activity_1voo8f4" targetRef="Activity_1vh2hqj"/>
+    <bpmn2:sequenceFlow id="Flow_0ejg0gj" sourceRef="Gateway_0pxb000" targetRef="Activity_1voo8f4">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IfhNAzbGEe-UzoaGftVf3A" language="http://www.java.com/java"><![CDATA[return KieFunctions.isTrue(approbation);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_148A8488-FB58-43D3-8B87-EF97E9B0BC2E" sourceRef="Activity_06cshdv" targetRef="_AA1A0F98-18C5-47EA-BA03-74E45929966C"/>
+    <bpmn2:sequenceFlow id="Flow_07bs4ca" sourceRef="Activity_1yrnzmr" targetRef="Activity_06cshdv"/>
+    <bpmn2:exclusiveGateway id="_B1E9CE27-F895-44DD-B272-87DC1127DAE5" drools:dg="_6C9598BA-C200-4049-A04E-85D47F05A9FE" gatewayDirection="Converging" default="_6C9598BA-C200-4049-A04E-85D47F05A9FE">
+      <bpmn2:incoming>_345DF013-6DD1-4314-8A9D-38F5FA613B1E</bpmn2:incoming>
+      <bpmn2:incoming>_91554CA2-CE95-4FD6-8C7F-64057805FE70</bpmn2:incoming>
+      <bpmn2:outgoing>_6C9598BA-C200-4049-A04E-85D47F05A9FE</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Activity_0qn2v4l" name="Approbation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Approbation]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[com.myspace.evaluation.Examen examLocal = (com.myspace.evaluation.Examen)kcontext.getVariable("examen");
+examLocal.setApprobation(approbation);
+System.out.println("approba is :"+examLocal.getApprobation());
+idexam = (float)examLocal.getId();
+]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_16k1it2</bpmn2:incoming>
+      <bpmn2:outgoing>_660D37CA-0E13-4F7A-B45B-8993658A535E</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_IfhNBDbGEe-UzoaGftVf3A">
+        <bpmn2:dataInput id="Activity_0qn2v4l_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Activity_0qn2v4l_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Activity_0qn2v4l_examenInputX" drools:dtype="com.myspace.evaluation.Examen" itemSubjectRef="_Activity_0qn2v4l_examenInputXItem" name="examen"/>
+        <bpmn2:dataInput id="Activity_0qn2v4l_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Activity_0qn2v4l_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Activity_0qn2v4l_approbationOutputX" drools:dtype="Boolean" itemSubjectRef="_Activity_0qn2v4l_approbationOutputXItem" name="approbation"/>
+        <bpmn2:inputSet id="_IfhNBTbGEe-UzoaGftVf3A">
+          <bpmn2:dataInputRefs>Activity_0qn2v4l_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_0qn2v4l_examenInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_0qn2v4l_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_IfhNBjbGEe-UzoaGftVf3A">
+          <bpmn2:dataOutputRefs>Activity_0qn2v4l_approbationOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_IfhNBzbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_0qn2v4l_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNCDbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNCTbGEe-UzoaGftVf3A"><![CDATA[approbation]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNCjbGEe-UzoaGftVf3A">Activity_0qn2v4l_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNCzbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>examen</bpmn2:sourceRef>
+        <bpmn2:targetRef>Activity_0qn2v4l_examenInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNDDbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_0qn2v4l_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNDTbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNDjbGEe-UzoaGftVf3A"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNDzbGEe-UzoaGftVf3A">Activity_0qn2v4l_SkippableInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_IfhNEDbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>Activity_0qn2v4l_approbationOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>approbation</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:potentialOwner id="_c533f6ec-8df1-4e3f-ab3c-18df6b9f8334">
+        <bpmn2:resourceAssignmentExpression id="_IfhNETbGEe-UzoaGftVf3A">
+          <bpmn2:formalExpression id="_IfhNEjbGEe-UzoaGftVf3A">wbadmin</bpmn2:formalExpression>
+        </bpmn2:resourceAssignmentExpression>
+      </bpmn2:potentialOwner>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="Gateway_0pxb000" gatewayDirection="Diverging">
+      <bpmn2:incoming>_660D37CA-0E13-4F7A-B45B-8993658A535E</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_0ejg0gj</bpmn2:outgoing>
+      <bpmn2:outgoing>_91554CA2-CE95-4FD6-8C7F-64057805FE70</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Activity_1vh2hqj" name="Suivi d'examen">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Suivi d'examen]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[com.myspace.evaluation.Examen locexam = (com.myspace.evaluation.Examen)kcontext.getVariable("examen");
+com.myspace.evaluation.suivi locsuivi = (com.myspace.evaluation.suivi)kcontext.getVariable("suivi");
+locsuivi.setIdexamen(locexam.getId());]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_23BA1F89-6202-4F91-A1B7-C05A52A11308</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_0ktcw4t</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_IfhNEzbGEe-UzoaGftVf3A">
+        <bpmn2:dataInput id="Activity_1vh2hqj_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Activity_1vh2hqj_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Activity_1vh2hqj_examenInputX" drools:dtype="com.myspace.evaluation.Examen" itemSubjectRef="_Activity_1vh2hqj_examenInputXItem" name="examen"/>
+        <bpmn2:dataInput id="Activity_1vh2hqj_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Activity_1vh2hqj_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Activity_1vh2hqj_suiviOutputX" drools:dtype="com.myspace.evaluation.suivi" itemSubjectRef="_Activity_1vh2hqj_suiviOutputXItem" name="suivi"/>
+        <bpmn2:inputSet id="_IfhNFDbGEe-UzoaGftVf3A">
+          <bpmn2:dataInputRefs>Activity_1vh2hqj_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_1vh2hqj_examenInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_1vh2hqj_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_IfhNFTbGEe-UzoaGftVf3A">
+          <bpmn2:dataOutputRefs>Activity_1vh2hqj_suiviOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_IfhNFjbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_1vh2hqj_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNFzbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNGDbGEe-UzoaGftVf3A"><![CDATA[suiviTask]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNGTbGEe-UzoaGftVf3A">Activity_1vh2hqj_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNGjbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>examen</bpmn2:sourceRef>
+        <bpmn2:targetRef>Activity_1vh2hqj_examenInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNGzbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_1vh2hqj_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNHDbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNHTbGEe-UzoaGftVf3A"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNHjbGEe-UzoaGftVf3A">Activity_1vh2hqj_SkippableInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_IfhNHzbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>Activity_1vh2hqj_suiviOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>suivi</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:potentialOwner id="_c8768854-6c36-4b4b-a97f-fcb7bfbd11bb">
+        <bpmn2:resourceAssignmentExpression id="_IfhNIDbGEe-UzoaGftVf3A">
+          <bpmn2:formalExpression id="_IfhNITbGEe-UzoaGftVf3A">wbadmin</bpmn2:formalExpression>
+        </bpmn2:resourceAssignmentExpression>
+      </bpmn2:potentialOwner>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="_AA1A0F98-18C5-47EA-BA03-74E45929966C" name="Clôturer l'examen">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Clôturer l'examen]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[com.myspace.evaluation.Examen locexam = (com.myspace.evaluation.Examen)kcontext.getVariable("examen");
+com.myspace.evaluation.cloture locclot = (com.myspace.evaluation.cloture)kcontext.getVariable("cloture");
+locclot.setIdexamen(locexam.getId());
+com.myspace.evaluation.ressources locres = (com.myspace.evaluation.ressources)kcontext.getVariable("ressources");
+locres.setIdexamen(locexam.getId());]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_148A8488-FB58-43D3-8B87-EF97E9B0BC2E</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_1q11s8m</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_IfhNIjbGEe-UzoaGftVf3A">
+        <bpmn2:dataInput id="_AA1A0F98-18C5-47EA-BA03-74E45929966C_TaskNameInputX" drools:dtype="Object" itemSubjectRef="__AA1A0F98-18C5-47EA-BA03-74E45929966C_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="_AA1A0F98-18C5-47EA-BA03-74E45929966C_examenInputX" drools:dtype="com.myspace.evaluation.Examen" itemSubjectRef="__AA1A0F98-18C5-47EA-BA03-74E45929966C_examenInputXItem" name="examen"/>
+        <bpmn2:dataInput id="_AA1A0F98-18C5-47EA-BA03-74E45929966C_SkippableInputX" drools:dtype="Object" itemSubjectRef="__AA1A0F98-18C5-47EA-BA03-74E45929966C_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="_AA1A0F98-18C5-47EA-BA03-74E45929966C_clotureOutputX" drools:dtype="com.myspace.evaluation.cloture" itemSubjectRef="__AA1A0F98-18C5-47EA-BA03-74E45929966C_clotureOutputXItem" name="cloture"/>
+        <bpmn2:dataOutput id="_AA1A0F98-18C5-47EA-BA03-74E45929966C_ressourcesOutputX" drools:dtype="com.myspace.evaluation.ressources" itemSubjectRef="__AA1A0F98-18C5-47EA-BA03-74E45929966C_ressourcesOutputXItem" name="ressources"/>
+        <bpmn2:inputSet id="_IfhNIzbGEe-UzoaGftVf3A">
+          <bpmn2:dataInputRefs>_AA1A0F98-18C5-47EA-BA03-74E45929966C_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_AA1A0F98-18C5-47EA-BA03-74E45929966C_examenInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_AA1A0F98-18C5-47EA-BA03-74E45929966C_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_IfhNJDbGEe-UzoaGftVf3A">
+          <bpmn2:dataOutputRefs>_AA1A0F98-18C5-47EA-BA03-74E45929966C_clotureOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_AA1A0F98-18C5-47EA-BA03-74E45929966C_ressourcesOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_IfhNJTbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>_AA1A0F98-18C5-47EA-BA03-74E45929966C_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNJjbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNJzbGEe-UzoaGftVf3A"><![CDATA[cloturer]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNKDbGEe-UzoaGftVf3A">_AA1A0F98-18C5-47EA-BA03-74E45929966C_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNKTbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>examen</bpmn2:sourceRef>
+        <bpmn2:targetRef>_AA1A0F98-18C5-47EA-BA03-74E45929966C_examenInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNKjbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>_AA1A0F98-18C5-47EA-BA03-74E45929966C_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNKzbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNLDbGEe-UzoaGftVf3A"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNLTbGEe-UzoaGftVf3A">_AA1A0F98-18C5-47EA-BA03-74E45929966C_SkippableInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_IfhNLjbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>_AA1A0F98-18C5-47EA-BA03-74E45929966C_clotureOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>cloture</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_IfhNLzbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>_AA1A0F98-18C5-47EA-BA03-74E45929966C_ressourcesOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>ressources</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:potentialOwner id="_fb01ea3c-7fa6-443e-8a7d-9316b37e118e">
+        <bpmn2:resourceAssignmentExpression id="_IfhNMDbGEe-UzoaGftVf3A">
+          <bpmn2:formalExpression id="_IfhNMTbGEe-UzoaGftVf3A">wbadmin</bpmn2:formalExpression>
+        </bpmn2:resourceAssignmentExpression>
+      </bpmn2:potentialOwner>
+    </bpmn2:userTask>
+    <bpmn2:startEvent id="StartEvent_1pxk9rb">
+      <bpmn2:outgoing>_345DF013-6DD1-4314-8A9D-38F5FA613B1E</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:userTask id="Activity_1qv614w" name="Planifier l'examen">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Planifier l'examen]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_6C9598BA-C200-4049-A04E-85D47F05A9FE</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_16k1it2</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_IfhNMjbGEe-UzoaGftVf3A">
+        <bpmn2:dataInput id="Activity_1qv614w_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Activity_1qv614w_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Activity_1qv614w_examenInputX" drools:dtype="com.myspace.evaluation.Examen" itemSubjectRef="_Activity_1qv614w_examenInputXItem" name="examen"/>
+        <bpmn2:dataInput id="Activity_1qv614w_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Activity_1qv614w_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Activity_1qv614w_examenOutputX" drools:dtype="com.myspace.evaluation.Examen" itemSubjectRef="_Activity_1qv614w_examenOutputXItem" name="examen"/>
+        <bpmn2:inputSet id="_IfhNMzbGEe-UzoaGftVf3A">
+          <bpmn2:dataInputRefs>Activity_1qv614w_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_1qv614w_examenInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_1qv614w_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_IfhNNDbGEe-UzoaGftVf3A">
+          <bpmn2:dataOutputRefs>Activity_1qv614w_examenOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_IfhNNTbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_1qv614w_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNNjbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNNzbGEe-UzoaGftVf3A"><![CDATA[Planifier]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNODbGEe-UzoaGftVf3A">Activity_1qv614w_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNOTbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>examen</bpmn2:sourceRef>
+        <bpmn2:targetRef>Activity_1qv614w_examenInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNOjbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_1qv614w_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNOzbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNPDbGEe-UzoaGftVf3A"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNPTbGEe-UzoaGftVf3A">Activity_1qv614w_SkippableInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_IfhNPjbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>Activity_1qv614w_examenOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>examen</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:potentialOwner id="_7c3e1b90-aab6-4cf6-837b-bc92c6f112df">
+        <bpmn2:resourceAssignmentExpression id="_IfhNPzbGEe-UzoaGftVf3A">
+          <bpmn2:formalExpression id="_IfhNQDbGEe-UzoaGftVf3A">wbadmin</bpmn2:formalExpression>
+        </bpmn2:resourceAssignmentExpression>
+      </bpmn2:potentialOwner>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Activity_0653kl5" name="Corriger l'examen">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Corriger l'examen]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[com.myspace.evaluation.Examen locexam = (com.myspace.evaluation.Examen)kcontext.getVariable("examen");
+com.myspace.evaluation.correction loccorrec = (com.myspace.evaluation.correction)kcontext.getVariable("correction");
+loccorrec.setIdexamen(locexam.getId());]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_0ktcw4t</bpmn2:incoming>
+      <bpmn2:outgoing>_5BFE00AA-FA3C-4FA8-BD36-2608C0168A1E</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_IfhNQTbGEe-UzoaGftVf3A">
+        <bpmn2:dataInput id="Activity_0653kl5_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Activity_0653kl5_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Activity_0653kl5_examenInputX" drools:dtype="com.myspace.evaluation.Examen" itemSubjectRef="_Activity_0653kl5_examenInputXItem" name="examen"/>
+        <bpmn2:dataInput id="Activity_0653kl5_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Activity_0653kl5_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Activity_0653kl5_correctionOutputX" drools:dtype="com.myspace.evaluation.correction" itemSubjectRef="_Activity_0653kl5_correctionOutputXItem" name="correction"/>
+        <bpmn2:inputSet id="_IfhNQjbGEe-UzoaGftVf3A">
+          <bpmn2:dataInputRefs>Activity_0653kl5_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_0653kl5_examenInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_0653kl5_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_IfhNQzbGEe-UzoaGftVf3A">
+          <bpmn2:dataOutputRefs>Activity_0653kl5_correctionOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_IfhNRDbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_0653kl5_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNRTbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNRjbGEe-UzoaGftVf3A"><![CDATA[corriger]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNRzbGEe-UzoaGftVf3A">Activity_0653kl5_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNSDbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>examen</bpmn2:sourceRef>
+        <bpmn2:targetRef>Activity_0653kl5_examenInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNSTbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_0653kl5_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNSjbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNSzbGEe-UzoaGftVf3A"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNTDbGEe-UzoaGftVf3A">Activity_0653kl5_SkippableInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_IfhNTTbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>Activity_0653kl5_correctionOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>correction</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:potentialOwner id="_d778a69b-cf4e-4cc1-bb8e-ff972039783d">
+        <bpmn2:resourceAssignmentExpression id="_IfhNTjbGEe-UzoaGftVf3A">
+          <bpmn2:formalExpression id="_IfhNTzbGEe-UzoaGftVf3A">wbadmin</bpmn2:formalExpression>
+        </bpmn2:resourceAssignmentExpression>
+      </bpmn2:potentialOwner>
+    </bpmn2:userTask>
+    <bpmn2:endEvent id="Event_1hisnmk">
+      <bpmn2:incoming>Flow_1q11s8m</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:userTask id="Activity_1yrnzmr" name="Traiter les recours">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Traiter les recours]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[com.myspace.evaluation.Examen locexam = (com.myspace.evaluation.Examen)kcontext.getVariable("examen");
+com.myspace.evaluation.recours locrec = (com.myspace.evaluation.recours)kcontext.getVariable("recours");
+locrec.setIdexamen(locexam.getId());]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_5BFE00AA-FA3C-4FA8-BD36-2608C0168A1E</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_07bs4ca</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_IfhNUDbGEe-UzoaGftVf3A">
+        <bpmn2:dataInput id="Activity_1yrnzmr_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Activity_1yrnzmr_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Activity_1yrnzmr_examenInputX" drools:dtype="com.myspace.evaluation.Examen" itemSubjectRef="_Activity_1yrnzmr_examenInputXItem" name="examen"/>
+        <bpmn2:dataInput id="Activity_1yrnzmr_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Activity_1yrnzmr_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Activity_1yrnzmr_recoursOutputX" drools:dtype="com.myspace.evaluation.recours" itemSubjectRef="_Activity_1yrnzmr_recoursOutputXItem" name="recours"/>
+        <bpmn2:inputSet id="_IfhNUTbGEe-UzoaGftVf3A">
+          <bpmn2:dataInputRefs>Activity_1yrnzmr_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_1yrnzmr_examenInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_1yrnzmr_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_IfhNUjbGEe-UzoaGftVf3A">
+          <bpmn2:dataOutputRefs>Activity_1yrnzmr_recoursOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_IfhNUzbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_1yrnzmr_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNVDbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNVTbGEe-UzoaGftVf3A"><![CDATA[traiter]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNVjbGEe-UzoaGftVf3A">Activity_1yrnzmr_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNVzbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>examen</bpmn2:sourceRef>
+        <bpmn2:targetRef>Activity_1yrnzmr_examenInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNWDbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_1yrnzmr_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNWTbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNWjbGEe-UzoaGftVf3A"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNWzbGEe-UzoaGftVf3A">Activity_1yrnzmr_SkippableInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_IfhNXDbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>Activity_1yrnzmr_recoursOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>recours</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:potentialOwner id="_d93e1ac5-7c9a-446d-ba5c-5b110b2740f5">
+        <bpmn2:resourceAssignmentExpression id="_IfhNXTbGEe-UzoaGftVf3A">
+          <bpmn2:formalExpression id="_IfhNXjbGEe-UzoaGftVf3A">wbadmin</bpmn2:formalExpression>
+        </bpmn2:resourceAssignmentExpression>
+      </bpmn2:potentialOwner>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Activity_1voo8f4" name="Préparer l'examen">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Préparer l'examen]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[com.myspace.evaluation.Examen locexam = (com.myspace.evaluation.Examen)kcontext.getVariable("examen");
+com.myspace.evaluation.speciality locspec = (com.myspace.evaluation.speciality)kcontext.getVariable("speciality");
+locspec.setIdexamen(locexam.getId());
+]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_0ejg0gj</bpmn2:incoming>
+      <bpmn2:outgoing>_23BA1F89-6202-4F91-A1B7-C05A52A11308</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_IfhNXzbGEe-UzoaGftVf3A">
+        <bpmn2:dataInput id="Activity_1voo8f4_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Activity_1voo8f4_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Activity_1voo8f4_examenInputX" drools:dtype="com.myspace.evaluation.Examen" itemSubjectRef="_Activity_1voo8f4_examenInputXItem" name="examen"/>
+        <bpmn2:dataInput id="Activity_1voo8f4_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Activity_1voo8f4_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Activity_1voo8f4_specialityOutputX" drools:dtype="com.myspace.evaluation.speciality" itemSubjectRef="_Activity_1voo8f4_specialityOutputXItem" name="speciality"/>
+        <bpmn2:inputSet id="_IfhNYDbGEe-UzoaGftVf3A">
+          <bpmn2:dataInputRefs>Activity_1voo8f4_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_1voo8f4_examenInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_1voo8f4_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_IfhNYTbGEe-UzoaGftVf3A">
+          <bpmn2:dataOutputRefs>Activity_1voo8f4_specialityOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_IfhNYjbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_1voo8f4_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNYzbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNZDbGEe-UzoaGftVf3A"><![CDATA[preparer]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNZTbGEe-UzoaGftVf3A">Activity_1voo8f4_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNZjbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>examen</bpmn2:sourceRef>
+        <bpmn2:targetRef>Activity_1voo8f4_examenInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNZzbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_1voo8f4_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNaDbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNaTbGEe-UzoaGftVf3A"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNajbGEe-UzoaGftVf3A">Activity_1voo8f4_SkippableInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_IfhNazbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>Activity_1voo8f4_specialityOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>speciality</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:potentialOwner id="_66cf4baf-69e8-4899-8421-92e5c5151b02">
+        <bpmn2:resourceAssignmentExpression id="_IfhNbDbGEe-UzoaGftVf3A">
+          <bpmn2:formalExpression id="_IfhNbTbGEe-UzoaGftVf3A">wbadmin</bpmn2:formalExpression>
+        </bpmn2:resourceAssignmentExpression>
+      </bpmn2:potentialOwner>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Activity_06cshdv" name="Délibérer">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Délibérer]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[com.myspace.evaluation.Examen locexam = (com.myspace.evaluation.Examen)kcontext.getVariable("examen");
+com.myspace.evaluation.deliberation locdel = (com.myspace.evaluation.deliberation)kcontext.getVariable("deliberation");
+locdel.setIdexamen(locexam.getId());]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_07bs4ca</bpmn2:incoming>
+      <bpmn2:outgoing>_148A8488-FB58-43D3-8B87-EF97E9B0BC2E</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_IfhNbjbGEe-UzoaGftVf3A">
+        <bpmn2:dataInput id="Activity_06cshdv_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Activity_06cshdv_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Activity_06cshdv_examenInputX" drools:dtype="com.myspace.evaluation.Examen" itemSubjectRef="_Activity_06cshdv_examenInputXItem" name="examen"/>
+        <bpmn2:dataInput id="Activity_06cshdv_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Activity_06cshdv_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Activity_06cshdv_deliberationOutputX" drools:dtype="com.myspace.evaluation.deliberation" itemSubjectRef="_Activity_06cshdv_deliberationOutputXItem" name="deliberation"/>
+        <bpmn2:inputSet id="_IfhNbzbGEe-UzoaGftVf3A">
+          <bpmn2:dataInputRefs>Activity_06cshdv_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_06cshdv_examenInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Activity_06cshdv_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_IfhNcDbGEe-UzoaGftVf3A">
+          <bpmn2:dataOutputRefs>Activity_06cshdv_deliberationOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_IfhNcTbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_06cshdv_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNcjbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNczbGEe-UzoaGftVf3A"><![CDATA[deliberer]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNdDbGEe-UzoaGftVf3A">Activity_06cshdv_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNdTbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>examen</bpmn2:sourceRef>
+        <bpmn2:targetRef>Activity_06cshdv_examenInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_IfhNdjbGEe-UzoaGftVf3A">
+        <bpmn2:targetRef>Activity_06cshdv_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_IfhNdzbGEe-UzoaGftVf3A">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IfhNeDbGEe-UzoaGftVf3A"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IfhNeTbGEe-UzoaGftVf3A">Activity_06cshdv_SkippableInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_IfhNejbGEe-UzoaGftVf3A">
+        <bpmn2:sourceRef>Activity_06cshdv_deliberationOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>deliberation</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:potentialOwner id="_1eb46531-f6f7-4bdd-85c2-d477fd4f4683">
+        <bpmn2:resourceAssignmentExpression id="_IfhNezbGEe-UzoaGftVf3A">
+          <bpmn2:formalExpression id="_IfhNfDbGEe-UzoaGftVf3A">wbadmin</bpmn2:formalExpression>
+        </bpmn2:resourceAssignmentExpression>
+      </bpmn2:potentialOwner>
+    </bpmn2:userTask>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_IfhNfTbGEe-UzoaGftVf3A">
+    <bpmndi:BPMNPlane id="_IfhNfjbGEe-UzoaGftVf3A" bpmnElement="Process_0ru32hs">
+      <bpmndi:BPMNShape id="shape_Activity_06cshdv" bpmnElement="Activity_06cshdv">
+        <dc:Bounds height="78.0" width="114.0" x="1028.0" y="277.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Activity_1voo8f4" bpmnElement="Activity_1voo8f4">
+        <dc:Bounds height="79.0" width="119.0" x="465.0" y="73.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Activity_1yrnzmr" bpmnElement="Activity_1yrnzmr">
+        <dc:Bounds height="82.0" width="122.0" x="848.0" y="275.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Event_1hisnmk" bpmnElement="Event_1hisnmk">
+        <dc:Bounds height="56.0" width="56.0" x="1208.0" y="85.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Activity_0653kl5" bpmnElement="Activity_0653kl5">
+        <dc:Bounds height="80.0" width="120.0" x="640.0" y="275.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Activity_1qv614w" bpmnElement="Activity_1qv614w">
+        <dc:Bounds height="80.0" width="121.0" x="280.5" y="73.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_StartEvent_1pxk9rb" bpmnElement="StartEvent_1pxk9rb">
+        <dc:Bounds height="56.0" width="56.0" x="171.0" y="85.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__AA1A0F98-18C5-47EA-BA03-74E45929966C" bpmnElement="_AA1A0F98-18C5-47EA-BA03-74E45929966C">
+        <dc:Bounds height="80.0" width="112.0" x="1028.0" y="73.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Activity_1vh2hqj" bpmnElement="Activity_1vh2hqj">
+        <dc:Bounds height="80.0" width="109.0" x="645.0" y="73.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Gateway_0pxb000" bpmnElement="Gateway_0pxb000">
+        <dc:Bounds height="56.0" width="56.0" x="496.0" y="280.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Activity_0qn2v4l" bpmnElement="Activity_0qn2v4l">
+        <dc:Bounds height="77.0" width="144.0" x="269.0" y="269.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__B1E9CE27-F895-44DD-B272-87DC1127DAE5" bpmnElement="_B1E9CE27-F895-44DD-B272-87DC1127DAE5">
+        <dc:Bounds height="56.0" width="56.0" x="171.0" y="172.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Lane_1e3diye" bpmnElement="Lane_1e3diye">
+        <dc:Bounds height="232.5" width="1205.0" x="85.0" y="242.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Lane_0y7vnj2" bpmnElement="Lane_0y7vnj2">
+        <dc:Bounds height="201.25" width="1205.0" x="85.0" y="43.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape_Activity_1yrnzmr_to_shape_Activity_06cshdv" bpmnElement="Flow_07bs4ca">
+        <di:waypoint xsi:type="dc:Point" x="970.0" y="316.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1028.0" y="316.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Activity_06cshdv_to_shape__AA1A0F98-18C5-47EA-BA03-74E45929966C" bpmnElement="_148A8488-FB58-43D3-8B87-EF97E9B0BC2E">
+        <di:waypoint xsi:type="dc:Point" x="1085.0" y="316.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1084.0" y="153.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_0pxb000_to_shape_Activity_1voo8f4" bpmnElement="Flow_0ejg0gj">
+        <di:waypoint xsi:type="dc:Point" x="524.0" y="280.0"/>
+        <di:waypoint xsi:type="dc:Point" x="426.0" y="188.0"/>
+        <di:waypoint xsi:type="dc:Point" x="426.0" y="113.0"/>
+        <di:waypoint xsi:type="dc:Point" x="465.0" y="112.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Activity_1voo8f4_to_shape_Activity_1vh2hqj" bpmnElement="_23BA1F89-6202-4F91-A1B7-C05A52A11308">
+        <di:waypoint xsi:type="dc:Point" x="524.5" y="112.5"/>
+        <di:waypoint xsi:type="dc:Point" x="645.0" y="113.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Activity_0653kl5_to_shape_Activity_1yrnzmr" bpmnElement="_5BFE00AA-FA3C-4FA8-BD36-2608C0168A1E">
+        <di:waypoint xsi:type="dc:Point" x="700.0" y="315.0"/>
+        <di:waypoint xsi:type="dc:Point" x="848.0" y="316.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__AA1A0F98-18C5-47EA-BA03-74E45929966C_to_shape_Event_1hisnmk" bpmnElement="Flow_1q11s8m">
+        <di:waypoint xsi:type="dc:Point" x="1140.0" y="113.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1208.0" y="103.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Activity_1vh2hqj_to_shape_Activity_0653kl5" bpmnElement="Flow_0ktcw4t">
+        <di:waypoint xsi:type="dc:Point" x="699.5" y="153.0"/>
+        <di:waypoint xsi:type="dc:Point" x="700.0" y="225.0"/>
+        <di:waypoint xsi:type="dc:Point" x="700.0" y="275.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__B1E9CE27-F895-44DD-B272-87DC1127DAE5_to_shape_Activity_1qv614w" bpmnElement="_6C9598BA-C200-4049-A04E-85D47F05A9FE">
+        <di:waypoint xsi:type="dc:Point" x="227.0" y="200.0"/>
+        <di:waypoint xsi:type="dc:Point" x="280.5" y="113.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Activity_1qv614w_to_shape_Activity_0qn2v4l" bpmnElement="Flow_16k1it2">
+        <di:waypoint xsi:type="dc:Point" x="341.0" y="153.0"/>
+        <di:waypoint xsi:type="dc:Point" x="341.0" y="269.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_StartEvent_1pxk9rb_to_shape__B1E9CE27-F895-44DD-B272-87DC1127DAE5" bpmnElement="_345DF013-6DD1-4314-8A9D-38F5FA613B1E">
+        <di:waypoint xsi:type="dc:Point" x="199.0" y="141.0"/>
+        <di:waypoint xsi:type="dc:Point" x="199.0" y="172.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Activity_0qn2v4l_to_shape_Gateway_0pxb000" bpmnElement="_660D37CA-0E13-4F7A-B45B-8993658A535E">
+        <di:waypoint xsi:type="dc:Point" x="341.0" y="346.0"/>
+        <di:waypoint xsi:type="dc:Point" x="496.0" y="305.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_0pxb000_to_shape__B1E9CE27-F895-44DD-B272-87DC1127DAE5" bpmnElement="_91554CA2-CE95-4FD6-8C7F-64057805FE70">
+        <di:waypoint xsi:type="dc:Point" x="524.0" y="336.0"/>
+        <di:waypoint xsi:type="dc:Point" x="524.0" y="417.0"/>
+        <di:waypoint xsi:type="dc:Point" x="199.0" y="417.0"/>
+        <di:waypoint xsi:type="dc:Point" x="199.0" y="417.0"/>
+        <di:waypoint xsi:type="dc:Point" x="199.0" y="228.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship id="_IfhNfzbGEe-UzoaGftVf3A" type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="Activity_06cshdv" id="_IfhNgDbGEe-UzoaGftVf3A">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="Activity_1voo8f4" id="_IfhNgTbGEe-UzoaGftVf3A">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="Activity_1yrnzmr" id="_IfhNgjbGEe-UzoaGftVf3A">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="Activity_0653kl5" id="_IfhNgzbGEe-UzoaGftVf3A">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="Activity_1qv614w" id="_IfhNhDbGEe-UzoaGftVf3A">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="StartEvent_1pxk9rb" id="_IfhNhTbGEe-UzoaGftVf3A">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_AA1A0F98-18C5-47EA-BA03-74E45929966C" id="_IfhNhjbGEe-UzoaGftVf3A">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="Activity_1vh2hqj" id="_IfhNhzbGEe-UzoaGftVf3A">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="Activity_0qn2v4l" id="_IfhNiDbGEe-UzoaGftVf3A">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_IfhNADbGEe-UzoaGftVf3A</bpmn2:source>
+    <bpmn2:target>_IfhNADbGEe-UzoaGftVf3A</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
